@@ -1,0 +1,35 @@
+.navbar{
+    height: 55px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+img{
+    margin-left: 40px;
+    width: 120px;
+    height: 35px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+   
+}
+li{
+    margin-left: 30px  ;
+}
+
+.nabright{
+    margin-right: 40px;
+    display: flex;
+    align-items: center center;
+    justify-content: space-between;
+}
+.nabright> button{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
