@@ -1,12 +1,17 @@
-<div class="slid">
-    <div class="shild">
-        <div class="item">
-            <link rel="stylesheet" href="" class="video">
-            <h2></h2>
+<h2>{{titel}}</h2>
+
+<div class="movie">
+    <div class="movie__images">
+        <div class="thumbnails">
+            <ngx-slick-carousel [config]="sliderConfig"  class="carousel">
+
+                <div class="slick__item" *ngFor="let item of [] .constructor(6)">
+                   
+                    <h4>IMAGES</h4>
+            
+                </div>
+            </ngx-slick-carousel>
         </div>
     </div>
-
-
-
-
 </div>
+

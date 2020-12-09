@@ -1,5 +1,10 @@
 
 <app-navbar></app-navbar>
-<app-slider></app-slider>
+<app-slider titel="Trending Now" [movies]="trending" [sliderConfig]="sliderConfig"></app-slider>
+<app-slider titel="Top Rated" [movies]="toprated" [sliderConfig]="sliderConfig"></app-slider>
+<app-slider titel="Now Playing" [movies]="nowplaying" [sliderConfig]="sliderConfig"></app-slider>
+<app-slider titel="Originals" [movies]="originals" [sliderConfig]="sliderConfig"></app-slider>
+<app-slider titel="Popular" [movies]="popular" [sliderConfig]="sliderConfig"></app-slider>
+<app-slider titel="wiw"></app-slider>
 <app-login></app-login>
 <router-outlet></router-outlet>
