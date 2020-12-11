@@ -5,23 +5,23 @@
   <div class="header">
 
     <div class="header__baner">
-      <h2>title</h2>
+      <h2>{{trending?.results[0].title}}</h2>
       <div class="header__buttons" 
       
       [ngStyle]="{
         
-        'background-image' : 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3))'
+        'background-image' : 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('+headerBGUrl+')'
       
       }" 
       
       >
 
-        <button class="paly-button">
+        <button class="paly_button">
           <mat-icon>arrow_right</mat-icon>
           <span>play</span>
         </button>
 
-        <button class="more-button">
+        <button class="more__button">
           <mat-icon>info</mat-icon>
           <span>More Info</span>
         </button>
@@ -50,7 +50,7 @@
           <li><a href="#"><mat-icon>card_giftcard</mat-icon></a></li>
           <li><a href="#"><mat-icon>notifications</mat-icon></a></li>
           <li>
-            <img src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="logo">
+            <img class="imag__avatar" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="logo">
           </li>
         </ul>
 

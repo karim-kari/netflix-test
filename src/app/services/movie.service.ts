@@ -1,4 +1,4 @@
-import { environment } from './../../environments/environment.prod';
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -6,12 +6,15 @@ import { Movies } from '../models/movies';
 
 
 
+
 const enum endpoint {
   latest = '/movie/latest',
-  now_playing = '/movie/latest',
-  upcoming = '/movie/latest',
-  trending = '/movie/latest',
-  original = '/movie/latest',
+  now_playing = '/movie/now_playing',
+  popular = '/movie/popular',
+  top_rated = '/movie/top_rated',
+  upcoming = '/movie/upcoming',
+  trending = '/trending/all/week',
+  originals = '/discover/tv'
 }
 
 
@@ -23,6 +26,7 @@ const enum endpoint {
 export class MovieService {
   private URL = 'https://api.themoviedb.org/3';
 
+  // tslint:disable-next-line:variable-name
   private api_key = environment.api;
 
   constructor(private http: HttpClient) {}
@@ -44,7 +48,7 @@ export class MovieService {
     });
   }
   getOriginals(): Observable<Movies> {
-    return this.http.get<Movies>(`${this.URL}${endpoint.original}`, {
+    return this.http.get<Movies>(`${this.URL}${endpoint.originals}`, {
       params: {
         api_key: this.api_key
       }
